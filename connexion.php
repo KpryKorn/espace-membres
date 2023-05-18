@@ -22,6 +22,7 @@
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $password = $_POST['password'];
 
+            // le mdp n'est pas hashé, penser à le faire dans un cas réel pour améliorer la sécurité
             if ($password === 'pompier2023') {
                 header('Location: ./index.html');
                 exit();
